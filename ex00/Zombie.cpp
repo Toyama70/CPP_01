@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ybestrio <ybestrio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yasinbestrioui <yasinbestrioui@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:52:29 by ybestrio          #+#    #+#             */
-/*   Updated: 2022/04/05 18:29:08 by ybestrio         ###   ########.fr       */
+/*   Updated: 2022/04/05 19:12:12 by yasinbestri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,21 @@ void	Zombie::announce()
 
 }
 
+std::string	Zombie::getName() const
+{
+	return this->name;
+}
+
+void	Zombie::setName(std::string name)
+{
+	this->name = name;
+}
+
 Zombie*	newZombie(std::string name)
 {
 	new Zombie;
-	
+	Zombie::setName(name);	
+
 
 
 }
