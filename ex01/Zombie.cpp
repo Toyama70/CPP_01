@@ -5,41 +5,44 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybestrio <ybestrio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 15:52:29 by ybestrio          #+#    #+#             */
-/*   Updated: 2022/04/06 11:12:23 by ybestrio         ###   ########.fr       */
+/*   Created: 2022/04/06 11:29:59 by ybestrio          #+#    #+#             */
+/*   Updated: 2022/04/06 12:16:31 by ybestrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <iostream>
+
+Zombie::Zombie()
+{
+	//announce();
+	return;
+}
 
 Zombie::Zombie(const std::string& name)
 : name(name)
 {
-	std::cout << this->name << " has been brought back to life." << std::endl;
-	Zombie::announce();	
-	return;
+	announce();
 }
 
 Zombie::~Zombie()
 {
-	std::cout << this->name << " died a horrible death..." << std::endl;
-	
-	return;
+	std::cout << this->name << " has been crushed into oblivion." << std::endl;
+	return ;
 }
 
-void	Zombie::announce()
+void Zombie::announce()
 {
-	std::cout << this->name;
-	std::cout << " : BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->name << " has been created." << std::endl;
 }
 
-std::string	Zombie::getName() const
+
+std::string Zombie::getName() const
 {
-	return this->name;
+	return (this->name);
+
 }
 
-void	Zombie::setName(std::string name)
+void Zombie::setName(const std::string name)
 {
 	this->name = name;
 }

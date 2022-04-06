@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybestrio <ybestrio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 10:09:40 by ybestrio          #+#    #+#             */
-/*   Updated: 2022/04/06 11:14:43 by ybestrio         ###   ########.fr       */
+/*   Created: 2022/04/06 14:34:46 by ybestrio          #+#    #+#             */
+/*   Updated: 2022/04/06 15:44:37 by ybestrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
+#include "Weapon.hpp"
 
-Zombie*	newZombie(std::string name)
+#include <iostream>
+#include <string>
+
+class HumanB
 {
-	Zombie* zombie1 = new Zombie(name);
-	return (zombie1);
-}
+public:
+
+	HumanB(std::string name);
+	~HumanB();
+	void	attack();
+	void	setWeapon(class Weapon& Weapon);
+
+private:
+	std::string	name;
+	Weapon		*Weapon;
+};
+
+
+#endif

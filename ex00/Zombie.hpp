@@ -6,7 +6,7 @@
 /*   By: ybestrio <ybestrio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:05:02 by ybestrio          #+#    #+#             */
-/*   Updated: 2022/04/05 18:26:33 by ybestrio         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:09:28 by ybestrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ class Zombie
 {
 
 	public :
-	Zombie();
+	Zombie(const std::string& name);
 	~Zombie();
 
 	void	announce();
-	Zombie* newZombie(std::string name);
-	void randomChump(std::string name);
 
 	//Getters
 	std::string getName() const;
@@ -35,5 +33,8 @@ class Zombie
 	private :
 	std::string name;
 };
+
+Zombie* newZombie(std::string name);
+void randomChump(std::string name);
 
 #endif

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybestrio <ybestrio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 10:09:40 by ybestrio          #+#    #+#             */
-/*   Updated: 2022/04/06 11:14:43 by ybestrio         ###   ########.fr       */
+/*   Created: 2022/04/06 11:37:52 by ybestrio          #+#    #+#             */
+/*   Updated: 2022/04/06 12:18:34 by ybestrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie*	newZombie(std::string name)
+int main()
 {
-	Zombie* zombie1 = new Zombie(name);
-	return (zombie1);
+	Zombie* horde = zombieHorde(4, "Yasin");
+	delete [] horde;
 }
